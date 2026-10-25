@@ -1,0 +1,58 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10100F"/>
+      <stop offset="100%" stop-color="#282319"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F0DDB0"/>
+      <stop offset="100%" stop-color="#9C7B3F"/>
+    </linearGradient>
+    <clipPath id="portrait">
+      <circle cx="155" cy="150" r="88"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="300" rx="16" fill="url(#bg)"/>
+
+  <circle cx="1040" cy="120" r="180" fill="#C7A968" opacity=".05"/>
+  <circle cx="1040" cy="120" r="135" fill="none" stroke="#C7A968" opacity=".16"/>
+
+  <circle cx="155" cy="150" r="102" fill="#C7A968" opacity=".08"/>
+
+  <image href="profile.jpg"
+         x="67" y="62" width="176" height="176"
+         preserveAspectRatio="xMidYMid slice"
+         clip-path="url(#portrait)"/>
+
+  <circle cx="155" cy="150" r="93" fill="none" stroke="url(#gold)" stroke-width="2"/>
+  <circle cx="155" cy="150" r="99" fill="none" stroke="#C7A968" stroke-opacity=".35"/>
+
+  <rect x="295" y="61" width="48" height="3" rx="1.5" fill="url(#gold)"/>
+
+  <text x="295" y="108" fill="#F5F0E6"
+        font-family="Georgia,serif" font-size="43" font-weight="bold">
+    Bhavya Nawani
+  </text>
+
+  <text x="298" y="151" fill="#DCC38E"
+        font-family="Arial,sans-serif" font-size="14"
+        font-weight="600" letter-spacing=".8"
+        textLength="570" lengthAdjust="spacingAndGlyphs">
+    PERFORMANCE MARKETING · SEO · SOCIAL MEDIA
+  </text>
+
+  <text x="298" y="195" fill="#F1EBDD"
+        font-family="Georgia,serif" font-size="24" font-style="italic">
+    Where Strategy Meets Measurable Growth.
+  </text>
+
+  <text x="298" y="232" fill="#B7B0A1"
+        font-family="Arial,sans-serif" font-size="11.5" letter-spacing="1.2">
+    RESEARCH / STRATEGY / MEASUREMENT / GROWTH
+  </text>
+
+  <path d="M900 300 L1200 0" fill="none" stroke="#C7A968" stroke-opacity=".10"/>
+  <rect x="295" y="263" width="825" height=".8" fill="#C7A968" opacity=".25"/>
+</svg>
