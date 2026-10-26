@@ -1,58 +1,227 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1200" height="300"
+     viewBox="0 0 1200 300">
+
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#10100F"/>
-      <stop offset="100%" stop-color="#282319"/>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111110"/>
+      <stop offset="55%" stop-color="#1D1B18"/>
+      <stop offset="100%" stop-color="#0C0C0B"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#F0DDB0"/>
-      <stop offset="100%" stop-color="#9C7B3F"/>
+
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F3DCA6"/>
+      <stop offset="50%" stop-color="#C6A15B"/>
+      <stop offset="100%" stop-color="#98713B"/>
     </linearGradient>
-    <clipPath id="portrait">
-      <circle cx="155" cy="150" r="88"/>
+
+    <linearGradient id="photoRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F5E2B4"/>
+      <stop offset="100%" stop-color="#A47C40"/>
+    </linearGradient>
+
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#C6A15B" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#C6A15B" stop-opacity="0"/>
+    </radialGradient>
+
+    <clipPath id="portraitClip">
+      <circle cx="145" cy="150" r="88"/>
     </clipPath>
   </defs>
 
-  <rect width="1200" height="300" rx="16" fill="url(#bg)"/>
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#background)"/>
+  <ellipse cx="145" cy="150" rx="180" ry="180" fill="url(#glow)"/>
+  <ellipse cx="1020" cy="150" rx="240" ry="200" fill="url(#glow)" opacity="0.45"/>
 
-  <circle cx="1040" cy="120" r="180" fill="#C7A968" opacity=".05"/>
-  <circle cx="1040" cy="120" r="135" fill="none" stroke="#C7A968" opacity=".16"/>
+  <!-- Subtle decorative lines -->
+  <path d="M0 18 H1200 M0 282 H1200"
+        stroke="#C6A15B" stroke-opacity="0.18" stroke-width="1"/>
 
-  <circle cx="155" cy="150" r="102" fill="#C7A968" opacity=".08"/>
+  <path d="M28 35 V265"
+        stroke="url(#gold)" stroke-width="2" opacity="0.65"/>
 
-  <image href="profile.jpg"
-         x="67" y="62" width="176" height="176"
-         preserveAspectRatio="xMidYMid slice"
-         clip-path="url(#portrait)"/>
+  <!-- Portrait frame -->
+  <circle cx="145" cy="150" r="96"
+          fill="none" stroke="#C6A15B"
+          stroke-opacity="0.22" stroke-width="1"/>
 
-  <circle cx="155" cy="150" r="93" fill="none" stroke="url(#gold)" stroke-width="2"/>
-  <circle cx="155" cy="150" r="99" fill="none" stroke="#C7A968" stroke-opacity=".35"/>
+  <circle cx="145" cy="150" r="91"
+          fill="#171512" stroke="url(#photoRing)" stroke-width="3"/>
 
-  <rect x="295" y="61" width="48" height="3" rx="1.5" fill="url(#gold)"/>
+  <!-- Photo: profile.jpg must be in the same assets folder -->
+  <image
+      xlink:href="profile.jpg"
+      href="profile.jpg"
+      x="57" y="62"
+      width="176" height="176"
+      preserveAspectRatio="xMidYMid slice"
+      clip-path="url(#portraitClip)"/>
 
-  <text x="295" y="108" fill="#F5F0E6"
-        font-family="Georgia,serif" font-size="43" font-weight="bold">
-    Bhavya Nawani
-  </text>
+  <!-- Inner portrait outline -->
+  <circle cx="145" cy="150" r="88"
+          fill="none" stroke="#F1D9A3"
+          stroke-opacity="0.6" stroke-width="1"/>
 
-  <text x="298" y="151" fill="#DCC38E"
-        font-family="Arial,sans-serif" font-size="14"
-        font-weight="600" letter-spacing=".8"
-        textLength="570" lengthAdjust="spacingAndGlyphs">
-    PERFORMANCE MARKETING · SEO · SOCIAL MEDIA
-  </text>
+  <!-- Small gold accents -->
+  <circle cx="145" cy="47" r="3" fill="#E8CC91"/>
+  <circle cx="145" cy="253" r="3" fill="#E8CC91"/>
 
-  <text x="298" y="195" fill="#F1EBDD"
-        font-family="Georgia,serif" font-size="24" font-style="italic">
-    Where Strategy Meets Measurable Growth.
-  </text>
+  <!-- Name -->
+  <text x="270" y="91"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="39"
+        font-weight="bold"
+        letter-spacing="0.2"
+        fill="#F4E9D1">Bhavya Nawani</text>
 
-  <text x="298" y="232" fill="#B7B0A1"
-        font-family="Arial,sans-serif" font-size="11.5" letter-spacing="1.2">
-    RESEARCH / STRATEGY / MEASUREMENT / GROWTH
-  </text>
+  <!-- Name underline accent -->
+  <path d="M272 105 H355"
+        stroke="url(#gold)" stroke-width="2"/>
 
-  <path d="M900 300 L1200 0" fill="none" stroke="#C7A968" stroke-opacity=".10"/>
-  <rect x="295" y="263" width="825" height=".8" fill="#C7A968" opacity=".25"/>
+  <!-- EXACT SPECIALTY LINE -->
+  <text x="272" y="132"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="14"
+        font-weight="600"
+        letter-spacing="1.1"
+        fill="#D8BD83">PERFORMANCE MARKETING · SEO · SOCIAL MEDIA</text>
+
+  <!-- Tagline -->
+  <text x="272" y="174"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="21"
+        font-style="italic"
+        fill="#F0E8D9">Where Strategy Meets</text>
+
+  <text x="272" y="201"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="21"
+        font-style="italic"
+        fill="#F0E8D9">Measurable Growth.</text>
+
+  <!-- Supporting detail -->
+  <text x="273" y="235"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="10"
+        letter-spacing="2"
+        fill="#9D9688">DATA-DRIVEN THINKING  ·  CREATIVE EXECUTION</text>
+
+  <!-- Vertical divider -->
+  <path d="M750 48 V252"
+        stroke="#C6A15B" stroke-opacity="0.55" stroke-width="1"/>
+
+  <!-- RIGHT PANEL: PERFORMANCE MARKETING -->
+  <g transform="translate(812 82)"
+     fill="none" stroke="url(#gold)"
+     stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <rect x="-22" y="-24" width="44" height="44"
+          rx="10" stroke-opacity="0.6"/>
+
+    <path d="M-12 10 V0 H-5 V10
+             M-2 10 V-8 H5 V10
+             M8 10 V-15 H15 V10"/>
+
+    <path d="M-13 -13 L-4 -18 L3 -12 L14 -20"
+          stroke-width="1.6"/>
+  </g>
+
+  <text x="812" y="128"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="10"
+        font-weight="600"
+        letter-spacing="0.6"
+        fill="#E7D4AA">PERFORMANCE</text>
+
+  <text x="812" y="143"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="10"
+        font-weight="600"
+        letter-spacing="0.6"
+        fill="#E7D4AA">MARKETING</text>
+
+  <!-- SEO -->
+  <g transform="translate(970 82)"
+     fill="none" stroke="url(#gold)"
+     stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <rect x="-22" y="-24" width="44" height="44"
+          rx="10" stroke-opacity="0.6"/>
+
+    <circle cx="-3" cy="-4" r="10"/>
+    <path d="M4 3 L13 12"/>
+    <path d="M-8 -4 H2 M-3 -9 V1"
+          stroke-width="1.4" opacity="0.75"/>
+  </g>
+
+  <text x="970" y="136"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="11"
+        font-weight="600"
+        letter-spacing="1.4"
+        fill="#E7D4AA">SEO</text>
+
+  <!-- SOCIAL MEDIA -->
+  <g transform="translate(1128 82)"
+     fill="none" stroke="url(#gold)"
+     stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <rect x="-22" y="-24" width="44" height="44"
+          rx="10" stroke-opacity="0.6"/>
+
+    <path d="M-9 -9 L8 -14
+             M-9 -9 L-8 9
+             M-8 9 L9 10"/>
+
+    <circle cx="-11" cy="-10" r="4" fill="#1A1814"/>
+    <circle cx="11" cy="-15" r="4" fill="#1A1814"/>
+    <circle cx="-8" cy="12" r="4" fill="#1A1814"/>
+    <circle cx="12" cy="10" r="4" fill="#1A1814"/>
+  </g>
+
+  <text x="1128" y="136"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="10"
+        font-weight="600"
+        letter-spacing="0.8"
+        fill="#E7D4AA">SOCIAL</text>
+
+  <text x="1128" y="151"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="10"
+        font-weight="600"
+        letter-spacing="0.8"
+        fill="#E7D4AA">MEDIA</text>
+
+  <!-- Bottom right detail -->
+  <path d="M790 190 H1160"
+        stroke="#C6A15B" stroke-opacity="0.25" stroke-width="1"/>
+
+  <text x="975" y="215"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="11"
+        font-style="italic"
+        letter-spacing="0.7"
+        fill="#B9AD96">Strategy. Visibility. Growth.</text>
+
+  <!-- Corner details -->
+  <path d="M1170 35 H1182 V47"
+        fill="none" stroke="#C6A15B" stroke-opacity="0.7"/>
+
+  <path d="M1170 265 H1182 V253"
+        fill="none" stroke="#C6A15B" stroke-opacity="0.7"/>
+
 </svg>
